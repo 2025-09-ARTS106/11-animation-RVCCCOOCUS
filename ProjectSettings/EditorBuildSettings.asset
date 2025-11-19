@@ -21,3 +21,4 @@ EditorBuildSettings:
     path: Assets/Scenes/04-Timeline.unity
     guid: b491447bebfb8384a9b19feaa33d6739
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

@@ -6,7 +6,8 @@ public class ChangeDirection : MonoBehaviour
 {
     private Animator ami;
     private float horizontalmove;
-        private float verticalmove;
+    private float verticalmove;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +18,28 @@ public class ChangeDirection : MonoBehaviour
     void Update()
     {
         horizontalmove = Input.GetAxis("Horizontal");
-    
-     verticalmove = Input.GetAxis ("Vertical");
 
-        if ( horizontalmove < 0)
+        verticalmove = Input.GetAxis("Vertical");
 
-        ami.SetInteger("direction", 3);
 
-         }
+        if (horizontalmove < 0)
+        {
+            ami.SetInteger("direction", 3);
+        }
+
+        if (horizontalmove > 0)
+        {
+            ami.SetInteger("direction", 1);
+        }
+
+        if (verticalmove < 0)
+        {
+            ami.SetInteger("direction", 2);
+        }
+
+        if (verticalmove > 0)
+        {
+            ami.SetInteger("direction", 0);
+        }
+    }
 }
